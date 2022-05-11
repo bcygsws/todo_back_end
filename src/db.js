@@ -18,7 +18,7 @@ exports.base = (sql, data, callback) => {
 	pool.connect((err) => {
 		if (err) {
 			// 数据库连接出错时，打印错误
-			console.log('err');
+			console.log(err);
 		}
 	});
 	pool.query(sql, data, (err, results) => {
