@@ -48,6 +48,7 @@ exports.delTodo = (req, res) => {
 };
 // 更改一条记录
 exports.changeTodo = (req, res) => {
+	// 在路径中形如：todos/todo/:id,那么id这种参数也叫做path参数，在Apifox接口测试工具中，把他归类为path参数；
 	const info = req.params;
 	const data = [info.isCompleted, info.id];
 	const sql = 'update todo set isCompleted=? where id=?';
